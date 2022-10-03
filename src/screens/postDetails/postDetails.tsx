@@ -25,7 +25,6 @@ export const PostDetailsScreen: React.FC<
   const { params } = useRoute();
   const theme = useTheme();
   const { user, title, body, id } = params as Post;
-  console.log({ user });
   const {
     data,
     fetchNextPage,
