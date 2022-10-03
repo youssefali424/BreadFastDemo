@@ -11,12 +11,12 @@ export const styles = StyleSheet.create({
   },
   userName: {
     fontSize: 16,
-    fontWeight: "600",
+    fontWeight: "900",
     marginBottom: 5,
   },
   title: {
     fontSize: 14,
-    fontWeight: "500",
+    fontWeight: "700",
   },
   body: {
     fontSize: 14,
