@@ -45,3 +45,9 @@ to run tests
 ```sh
 yarn run test
 ```
+## Stack
+- React native
+- Expo
+- react query
+- graphql
+- atomic design
