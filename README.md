@@ -1,5 +1,6 @@
 # BreadFast Demo
 A React-native demo project using expo and Typescript.
+dark mode is supported and can be toggled using the fab button on the right bottom of the app,and defaults to system default 
 
 <p>
   <!-- iOS -->
