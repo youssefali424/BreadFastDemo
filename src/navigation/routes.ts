@@ -6,5 +6,5 @@ export const Routes: {
   PostDetails: "PostDetails",
 };
 export type MainStackParams = {
-  [p in MainStackRoutes]: undefined;
+  [p in MainStackRoutes]: object | undefined;
 };

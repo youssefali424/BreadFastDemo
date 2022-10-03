@@ -1,17 +1,27 @@
-import { useNavigation, useRoute, useTheme } from "@react-navigation/native";
+import {
+  NavigationProp,
+  useNavigation,
+  useRoute,
+  useTheme,
+} from "@react-navigation/native";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+
 import React from "react";
 import { View, Image, ScrollView } from "react-native";
 import { AppText } from "../../components/atoms/appText";
 import ErrorView from "../../components/molecules/ErrorView";
 import PaginationFlatlist from "../../components/organisms/flatlist/PaginationFlatlist";
 import { CommentItem } from "../../components/organisms/listItems/Comment";
+import { MainStackParams } from "../../navigation/routes";
 import commonStyles from "../../styles/common/style";
 import { Post } from "../../types/post";
 import { images } from "../../util/assets";
 import { usePostDetails } from "../../util/hooks/postDetails";
 import { styles } from "./styles";
 
-export const PostDetailsScreen = () => {
+export const PostDetailsScreen: React.FC<
+  Partial<NativeStackScreenProps<MainStackParams, "PostDetails">>
+> = () => {
   const { params } = useRoute();
   const theme = useTheme();
   const { user, title, body, id } = params as Post;
@@ -20,8 +30,6 @@ export const PostDetailsScreen = () => {
     data,
     fetchNextPage,
     hasNextPage,
-    refetch,
-    isRefetching,
     isFetchingNextPage,
     isLoading,
     refresh,
@@ -72,7 +80,7 @@ export const PostDetailsScreen = () => {
         error={!!error}
         nestedScrollEnabled
       />
-      {!error && !isLoading && list.length == 0 && (
+      {!error && !isLoading && list?.length == 0 && (
         <View style={[commonStyles.center, commonStyles.container]}>
           <AppText>{"no comments"}</AppText>
         </View>
