@@ -64,7 +64,7 @@ export const PostDetailsScreen: React.FC<
         ListHeaderComponent={
           <View style={styles.bodyContainer}>
             <AppText style={styles.userName}>{title}</AppText>
-            <AppText style={styles.email}>{body}</AppText>
+            <AppText style={{ marginBottom: 5 }}>{body}</AppText>
             <AppText style={styles.userName}>{"Comments"}</AppText>
           </View>
         }

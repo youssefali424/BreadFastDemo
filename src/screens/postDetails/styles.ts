@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
   },
   bodyContainer: {
     marginHorizontal: 10,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
 
 });
