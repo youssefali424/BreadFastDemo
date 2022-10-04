@@ -1,15 +1,9 @@
-import {
-  NavigationProp,
-  useNavigation,
-  useRoute,
-  useTheme,
-} from "@react-navigation/native";
+import { useRoute, useTheme } from "@react-navigation/native";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import React from "react";
-import { View, Image, ScrollView } from "react-native";
+import { View, Image } from "react-native";
 import { AppText } from "../../components/atoms/appText";
-import ErrorView from "../../components/molecules/ErrorView";
 import PaginationFlatlist from "../../components/organisms/flatlist/PaginationFlatlist";
 import { CommentItem } from "../../components/organisms/listItems/Comment";
 import { MainStackParams } from "../../navigation/routes";
@@ -58,7 +52,6 @@ export const PostDetailsScreen: React.FC<
         keyExtractor={(item) => `${item.id}`}
         contentContainerStyle={{
           paddingBottom: 40,
-          flex: 1,
         }}
         ListHeaderComponent={
           <View style={styles.bodyContainer}>
@@ -73,8 +66,8 @@ export const PostDetailsScreen: React.FC<
           fetchNextPage({});
         }}
         onRefresh={refresh}
-        loadingMore={isLoading || isFetchingNextPage}
-        refreshing={refereshing && !isFetchingNextPage}
+        loadingMore={(!refereshing && isLoading) || isFetchingNextPage}
+        refreshing={refereshing}
         hasNextPage={hasNextPage}
         error={!!error}
         nestedScrollEnabled

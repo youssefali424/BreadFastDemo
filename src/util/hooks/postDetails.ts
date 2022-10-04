@@ -13,7 +13,7 @@ const endpoint = "https://gorest.co.in/public/v2/graphql";
 
 export function usePostDetails(id: number) {
   const paginatedQuery = useInfiniteQuery<PaginationData<ApiComment>>(
-    ["comments"],
+    ["comments", id],
     async ({ pageParam }) => {
       const res = await request(
         endpoint,
@@ -47,7 +47,7 @@ export function usePostDetails(id: number) {
       getNextPageParam: (lastPage) =>
         lastPage.pageInfo.hasNextPage ? lastPage.pageInfo.endCursor : undefined,
       keepPreviousData: true,
-      retry: (failureCount, error) => failureCount < 3,
+      retry: (failureCount, error) => failureCount < 2,
     }
   );
   const client = useQueryClient();
@@ -60,7 +60,7 @@ export function usePostDetails(id: number) {
     });
     if (!data.isError) {
       client.setQueryData<InfiniteData<PaginationData<ApiComment>>>(
-        ["comments"],
+        ["comments", id],
         (input) => {
           return {
             pageParams: [],
