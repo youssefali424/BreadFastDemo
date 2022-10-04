@@ -1,6 +1,7 @@
 # BreadFast Demo
+
 A React-native demo project using expo and Typescript.
-dark mode is supported and can be toggled using the fab button on the right bottom of the app,and defaults to system default 
+dark mode is supported and can be toggled using the fab button on the right bottom of the app,and defaults to system default
 
 <p>
   <!-- iOS -->
@@ -10,42 +11,60 @@ dark mode is supported and can be toggled using the fab button on the right bott
 </p>
 
 # Screenshots
+
 ### Splash
+
 <img src="app-screenshots/splash.png" width="128"/>
 
 ### Android
-| <img src="app-screenshots/android-1.png" width="128"/> | <img src="app-screenshots/android-2.png" width="128"/>  |  
-|---|---|
-| <img src="app-screenshots/android-3.png" width="128"/>    | <img src="app-screenshots/android-4.png" width="128"/>
+
+| <img src="app-screenshots/android-1.png" width="128"/> | <img src="app-screenshots/android-2.png" width="128"/> |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| <img src="app-screenshots/android-3.png" width="128"/> | <img src="app-screenshots/android-4.png" width="128"/> |
 
 ### iOs
-| <img src="app-screenshots/ios-1.png" width="128"/> | <img src="app-screenshots/ios-2.png" width="128"/>  |  
-|---|---|
-| <img src="app-screenshots/ios-3.png" width="128"/>    | <img src="app-screenshots/ios-4.png" width="128"/>
+
+| <img src="app-screenshots/ios-1.png" width="128"/> | <img src="app-screenshots/ios-2.png" width="128"/> |
+| -------------------------------------------------- | -------------------------------------------------- |
+| <img src="app-screenshots/ios-3.png" width="128"/> | <img src="app-screenshots/ios-4.png" width="128"/> |
 
 ## Run
-installing expo cli 
+
+installing expo cli
+
 ```sh
 npm i -g expo-cli
 ```
+
 ```sh
 yarn
 ```
+
 #### Android
+
 ```sh
 yarn run android
 ```
+
+or download this [apk](https://turtle-v2-artifacts.s3.amazonaws.com/android/6fcde695-2251-4475-bea3-6f002400aaab-d5b1ff4a955e47f4bac3921ab2c9b254/application-archive.apk)
+
 #### iOs
+
 ```sh
 yarn run ios
 ```
+
 ## Testing
+
 Only a subset of the tests were implemented for post details screen.
 to run tests
+
 ```sh
 yarn run test
 ```
+
 ## Stack
+
 - React native
 - Expo
 - react query
