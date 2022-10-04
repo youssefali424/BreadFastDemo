@@ -46,7 +46,7 @@ yarn
 yarn run android
 ```
 
-or download this [apk](https://expo.dev/artifacts/eas/4pPWJWo97qzDnp6Qz6zRjp.apk)
+or download this [apk](https://expo.dev/artifacts/eas/i99XqbyKbecHspzw2jB911.apk)
 
 #### iOs
 
